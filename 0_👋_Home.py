@@ -20,7 +20,7 @@ with st.sidebar:
 
 
 # ----- Top title -----
-st.write(f"""<div style="text-align: center;"><h1 style="text-align: center;">👋 Hi! My name is ????</h1></div>""", unsafe_allow_html=True)  # TODO: Add your name
+st.write(f"""<div style="text-align: center;"><h1 style="text-align: center;">👋 Hi! My name is Eden</h1></div>""", unsafe_allow_html=True)
 
 
 # ----- Profile image file -----
@@ -39,7 +39,7 @@ st.write(f"""
 
 
 # ----- Personal title or short description -----
-current_role = "Current Role and/or Studies or Description"   # TODO: Change this
+current_role = "Big Data Master Student in Barcelona"   
 
 st.write(f"""<div style="text-align: center;"><h4><i>{current_role}</i></h4></div>""", unsafe_allow_html=True)
 
@@ -51,7 +51,7 @@ st.subheader("About Me")
 
 # TODO: Modify and adapt the following lines to your info, you can add or remove some details if you want
 st.write("""
-- 🧑‍💻 I am a <Current Role and/or Studies> 
+- 🧑‍💻 I am a <Big Data Master Student in Barcelona> 
 
 - 🛩️ prev: <Previous Experience, Background or Studies>
 
@@ -61,7 +61,7 @@ st.write("""
 
 - 🏂 <Your Hobbies>
 
-- 📫 How to reach me: <Your Email>
+- 📫 How to reach me: <eden.schreurs@gmail.com>
 
 - 🏠 Barcelona
 """)
