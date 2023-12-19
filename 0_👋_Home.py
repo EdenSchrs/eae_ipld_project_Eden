@@ -39,7 +39,7 @@ st.write(f"""
 
 
 # ----- Personal title or short description -----
-current_role = "Big Data Master Student in Barcelona"   
+current_role = "Big Data Master Student"   
 
 st.write(f"""<div style="text-align: center;"><h4><i>{current_role}</i></h4></div>""", unsafe_allow_html=True)
 
