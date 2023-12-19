@@ -47,10 +47,10 @@ st.write("#")
 shape = img_arr.shape
 
 min_height = 0 
-max_height = np.shape[0]   
+max_height = img_arr.shape[0]   
 
 min_width = 0
-max_width = np.shape[1]       
+max_width = img_arr.shape[1]       
 
 
 # ----- Creating the sliders to receive the user input with the dimensions to crop the image ----- 
@@ -70,10 +70,9 @@ else:
     st.subheader("⚠️ You still need to develop the Ex 1.1.")
 
 
-# TODO: Ex. 1.3: Crop the image array img_arr using the crop_min_h, crop_max_h, crop_min_w and crop_max_w values -----
+# Ex. 1.3: Crop the image array img_arr using the crop_min_h, crop_max_h, crop_min_w and crop_max_w values -----
 
-crop_arr = None  # TODO: Generate the crop array into a new variable, use NumPy array slicing
-
+crop_arr = img_arr[crop_min_w:crop_max_w, crop_min_h:crop_max_h, :]  # Generate the crop array into a new variable, use NumPy array slicing
 
 # ----- Displaying the cropped image and creating a download button to download the image -----
 
