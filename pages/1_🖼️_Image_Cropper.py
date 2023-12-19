@@ -47,10 +47,10 @@ st.write("#")
 shape = img_arr.shape
 
 min_height = 0 
-max_height = img_arr.shape[1]   
+max_height = img_arr.shape[0]   
 
 min_width = 0
-max_width = img_arr.shape[0]       
+max_width = img_arr.shape[1]       
 
 
 # ----- Creating the sliders to receive the user input with the dimensions to crop the image ----- 
