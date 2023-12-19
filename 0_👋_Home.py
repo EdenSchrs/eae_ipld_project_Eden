@@ -24,7 +24,7 @@ st.write(f"""<div style="text-align: center;"><h1 style="text-align: center;">�
 
 
 # ----- Profile image file -----
-profile_image_file_path = "profile_image.jpg"       # TODO: Upload your profile image to the same folder as this script and update this if it has a different name
+profile_image_file_path = "profile_image.jpg"
 
 with open(profile_image_file_path, "rb") as img_file:
     img = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
@@ -49,19 +49,18 @@ st.write("##")    # Adding some space
 # ----- About me section -----
 st.subheader("About Me")
 
-# TODO: Modify and adapt the following lines to your info, you can add or remove some details if you want
 st.write("""
 - 🧑‍💻 I am a Big Data Master Student in Barcelona
 
-- 🛩️ prev: <Previous Experience, Background or Studies>
+- 🛩️ Coming from an international educational background, I excel in multicultural environments. I have lived in 8 countries growing up, spanning 3 continents. My Bachelor studies was in International Management with a specialization in Digital Marketing. All my work experience has been in different cities which include roles in sales and marketing as well as web development.
 
-- ❤️ <Your Passion and/or Interests>
+- ❤️ I am passionate about all things organization, reading and self-help. 
 
-- 🤖 <Your Personal Projects>
+- 🤖 Currently I am working on finding job opportunities abroad and in Barcelona. On the side, I am interested in reaching out to creators online to see what I can learn from helping them.
 
-- 🏂 <Your Hobbies>
+- 🏂 I love to play volleyball and occasionally I run as well. 
 
-- 📫 How to reach me: <eden.schreurs@gmail.com>
+- 📫 How to reach me: eden.schreurs@gmail.com
 
 - 🏠 Barcelona
 """)
