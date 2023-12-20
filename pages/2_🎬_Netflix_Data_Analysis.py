@@ -70,6 +70,8 @@ n_countries = len(country_list_new)
 
 print(f"There are {n_countries} different countries in the data")
 
+
+
 # ----- Displaying the extracted information metrics -----
 
 st.write("##")
