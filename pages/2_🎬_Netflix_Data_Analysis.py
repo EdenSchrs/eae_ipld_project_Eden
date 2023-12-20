@@ -50,7 +50,27 @@ max_year = movies_df["release_year"].max()
 
 num_missing_directors = movies_df["director"].isnull().sum()
 
+movies_df["country"].fillna("Unknown", inplace=True)
+
+unique_countries = movies_df["country"].unique().tolist()
+
+all_countries_str = ', '.join(unique_countries)
+
+split_all_countries = all_countries_str.split(', ')
+
+avg_title_length = movies_df['Title_Length'].mean()
+
+country_list_new = []
+
+for country in split_all_countries:
+    if country not in country_list_new and country != "" and "," not in country:
+        country_list_new.append(country)
+
 n_countries = len(country_list_new)
+
+print(f"There are {n_countries} different countries in the data")
+
+movies_df['Title_Length'] = movies_df['title'].apply(lambda x: len(x))
 
 avg_title_length = movies_df['Title_Length'].mean()
 
@@ -76,8 +96,7 @@ st.header("Top Year Producer Countries")
 cols2 = st.columns(2)
 year = cols2[0].number_input("Select a year:", min_year, max_year, 2005)
 
-# Ex 2.6: For a given year, get the Pandas Series of how many movies and series 
-# combined were made by every country, limit it to the top 10 countries.
+filtering_year = movies_df.loc[movies_df["release_year"]==year]
 top_10_countries = pd.Series(filtering_year["country"].value_counts().head(10))
 
 # print(top_10_countries)
