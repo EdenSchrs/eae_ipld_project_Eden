@@ -70,11 +70,6 @@ n_countries = len(country_list_new)
 
 print(f"There are {n_countries} different countries in the data")
 
-movies_df['Title_Length'] = movies_df['title'].apply(lambda x: len(x))
-
-avg_title_length = movies_df['Title_Length'].mean()
-
-
 # ----- Displaying the extracted information metrics -----
 
 st.write("##")
