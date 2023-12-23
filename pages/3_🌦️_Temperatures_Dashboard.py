@@ -29,7 +29,7 @@ st.divider()
 
 @st.cache_data
 def load_data():
-    data_path = '/Users/edenschreurs/Documents/IPL EAE code/eae_ipld_project_Eden/data/cities_temperatures.csv'
+    data_path = "/Users/edenschreurs/Documents/IPL EAE code/eae_ipld_project_Eden/data/cities_temperatures.csv"
 
     temps_df = pd.read_csv(data_path)  # Ex 3.1: Load the dataset using Pandas, use the data_path variable and set the index column to "show_id"
 
