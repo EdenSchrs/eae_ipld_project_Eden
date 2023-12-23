@@ -29,9 +29,9 @@ st.divider()
 
 @st.cache_data
 def load_data():
-    data_path = "data/cities_temperatures.csv"
+    data_path = '/Users/edenschreurs/Documents/IPL EAE code/eae_ipld_project_Eden/data/cities_temperatures.csv'
 
-    temps_df = None  # TODO: Ex 3.1: Load the dataset using Pandas, use the data_path variable and set the index column to "show_id"
+    temps_df = pd.read_csv(data_path)  # Ex 3.1: Load the dataset using Pandas, use the data_path variable and set the index column to "show_id"
 
     if temps_df is not None:
         temps_df["Date"] = pd.to_datetime(temps_df["Date"]).dt.date
@@ -48,18 +48,17 @@ with st.expander("Check the complete dataset:"):
 
 # ----- Data transformation -----
 
-# TODO: Ex 3.2: Create a new column called `AvgTemperatureCelsius` that contains the temperature in Celsius degrees.
-# temps_df["AvgTemperatureCelsius"] = ...       # uncomment this line to complete it
-
+# Ex 3.2: Create a new column called `AvgTemperatureCelsius` that contains the temperature in Celsius degrees.
+temps_df["AvgTemperatureCelsius"] = temps_df["AvgTemperatureFahrenheit"].apply(lambda x: (5/9) * x - 32)
 
 # ----- Extracting some basic information from the dataset -----
 
-# TODO: Ex 3.3: How many different cities are there? Provide a list of them.
-unique_countries_list = None
+# Ex 3.3: How many different cities are there? Provide a list of them.
+unique_countries_list = temps_df['City'].unique()
 
-# TODO: Ex 3.4: Which are the minimum and maximum dates?
-min_date = None
-max_date = None
+# Ex 3.4: Which are the minimum and maximum dates?
+min_date = temps_df['Date'].min()
+max_date = temps_df['Date'].max()
 
 # TODO:  Ex 3.5: What are the global minimum and maximum temperatures? Find the city and the date of each of them.
 min_temp = None
