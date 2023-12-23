@@ -60,14 +60,14 @@ min_date = temps_df['Date'].min()
 max_date = temps_df['Date'].max()
 
 # TODO:  Ex 3.5: What are the global minimum and maximum temperatures? Find the city and the date of each of them.
-min_temp = None
-max_temp = None
+min_temp = 1
+max_temp = 1
 
-min_temp_city = None
-min_temp_date = None
+min_temp_city = 1
+min_temp_date = 1
 
-max_temp_city = None
-max_temp_date = None
+max_temp_city = 1
+max_temp_date = 1
 
 
 # ----- Displaying the extracted information metrics -----
