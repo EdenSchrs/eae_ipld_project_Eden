@@ -59,15 +59,15 @@ unique_countries_list = temps_df['City'].unique()
 min_date = temps_df['Date'].min()
 max_date = temps_df['Date'].max()
 
-# TODO:  Ex 3.5: What are the global minimum and maximum temperatures? Find the city and the date of each of them.
-min_temp = 1
-max_temp = 1
+# Ex 3.5: What are the global minimum and maximum temperatures? Find the city and the date of each of them.
+min_temp = temps_df['AvgTemperatureCelsius'].min()
+max_temp = temps_df['AvgTemperatureCelsius'].max()
 
-min_temp_city = 1
-min_temp_date = 1
+min_temp_city = temps_df[temps_df['AvgTemperatureCelsius'] == min_temp]['City'].values[0]
+min_temp_date = temps_df[temps_df['AvgTemperatureCelsius'] == min_temp]['Date'].values[0]
 
-max_temp_city = 1
-max_temp_date = 1
+max_temp_city = temps_df[temps_df['AvgTemperatureCelsius'] == max_temp]['City'].values[0]
+max_temp_date = temps_df[temps_df['AvgTemperatureCelsius'] == max_temp]['Date'].values[0]
 
 
 # ----- Displaying the extracted information metrics -----
