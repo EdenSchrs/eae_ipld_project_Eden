@@ -48,7 +48,7 @@ with st.expander("Check the complete dataset:"):
 # ----- Data transformation -----
 
 # Ex 3.2: Create a new column called `AvgTemperatureCelsius` that contains the temperature in Celsius degrees.
-temps_df["AvgTemperatureCelsius"] = temps_df["AvgTemperatureFahrenheit"].apply(lambda x: (5/9) * x - 32)
+temps_df["AvgTemperatureCelsius"] = temps_df["AvgTemperatureFahrenheit"].apply(lambda x: (5/9) * (x - 32))
 
 # ----- Extracting some basic information from the dataset -----
 
