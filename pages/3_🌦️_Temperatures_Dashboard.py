@@ -135,7 +135,7 @@ if unique_countries_list is not None and len(selected_cities) > 0:
     (temps_df['Date'] <= end_date)]
 
     for city in selected_cities:
-        selected_city_df = temps_df[temps_df['City'] == city]
+        selected_city_df = city_df_period[city_df_period['City'] == city]
         plt.plot(selected_city_df["Date"], selected_city_df["AvgTemperatureCelsius"], label=city)     
      
     plt.title("Average Temperatures in Cities Overtime")
@@ -156,7 +156,7 @@ if unique_countries_list is not None and len(selected_cities) > 0:
         selected_city_df = temps_df[(temps_df['City'] == city) & (temps_df['Date'] >= start_date) & (temps_df['Date'] <= end_date)]
         plt.hist(selected_city_df["AvgTemperatureCelsius"], bins=20, label=city, alpha=0.5) 
 
-    plt.title("Temperature Distribution in Munich, Buenos Aires and Tokyo")   
+    plt.title("Temperature Distribution from 2009/01/01 to 2018/12/31")   
     plt.xlabel("Average Temperature (°C)")  
     plt.ylabel("Frequency")  
 
