@@ -130,9 +130,7 @@ if unique_countries_list is not None and len(selected_cities) > 0:
     fig = plt.figure(figsize=(10, 5))
 
     city_df_period = temps_df[                         
-    ((temps_df['City'] == selected_cities[0]) | 
-     (temps_df['City'] == selected_cities[1]) | 
-     (temps_df['City'] == selected_cities[2])) & 
+    (temps_df['City'].isin(selected_cities)) & 
     (temps_df['Date'] >= start_date) & 
     (temps_df['Date'] <= end_date)]
 
