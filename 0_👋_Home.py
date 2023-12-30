@@ -60,7 +60,7 @@ st.write("""
 
 - 🏂 I love to play volleyball and occasionally I run as well. 
 
-- 📫 How to reach me: eden.schreurs@gmail.com
+- 📫 How to reach me: eden.schreurs@gmail.com / https://www.linkedin.com/in/edenschreurs/
 
 - 🏠 Barcelona
 """)
