@@ -124,38 +124,43 @@ if unique_countries_list is not None and len(selected_cities) > 0:
 
     c = st.container(border=True)
 
-    # TODO: Ex 3.7: Plot the temperatures over time for the selected cities for the selected time period,
+    # Ex 3.7: Plot the temperatures over time for the selected cities for the selected time period,
     # every city has to be its own line with a different color.
 
     fig = plt.figure(figsize=(10, 5))
 
-    # for city in selected_cities:
-    #     city_df = None            # TODO
-    #     city_df_period = None     # TODO
-    #     plt.plot()                # TODO 
-    # plt.title()   # TODO
-    # plt.xlabel()  # TODO
-    # plt.ylabel()  # TODO
+    city_df_period = temps_df[                         
+    ((temps_df['City'] == selected_cities[0]) | 
+     (temps_df['City'] == selected_cities[1]) | 
+     (temps_df['City'] == selected_cities[2])) & 
+    (temps_df['Date'] >= start_date) & 
+    (temps_df['Date'] <= end_date)]
+
+    for city in selected_cities:
+        selected_city_df = temps_df[temps_df['City'] == city]
+        plt.plot(selected_city_df["Date"], selected_city_df["AvgTemperatureCelsius"], label=city)     
+     
+    plt.title("Average Temperatures in Cities Overtime")
+    plt.xlabel("Date (year)")
+    plt.ylabel("Temperature (°C)")
 
     plt.legend()
-    
+
     c.pyplot(fig)
 
 
-
-    # TODO: Make a histogram of the temperature reads of a list of selected cities, for the selected time period, 
+    # Make a histogram of the temperature reads of a list of selected cities, for the selected time period, 
     # every city has to be its own distribution with a different color.
 
     fig = plt.figure(figsize=(10, 5))
 
-    # for city in selected_cities:
-    #     city_df = None            # TODO
-    #     city_df_period = None     # TODO
-    #     plt.hist()                # TODO
+    for city in selected_cities:
+        selected_city_df = temps_df[(temps_df['City'] == city) & (temps_df['Date'] >= start_date) & (temps_df['Date'] <= end_date)]
+        plt.hist(selected_city_df["AvgTemperatureCelsius"], bins=20, label=city, alpha=0.5) 
 
-    # plt.title()   # TODO
-    # plt.xlabel()  # TODO
-    # plt.ylabel()  # TODO
+    plt.title("Temperature Distribution in Munich, Buenos Aires and Tokyo")   
+    plt.xlabel("Average Temperature (°C)")  
+    plt.ylabel("Frequency")  
 
     plt.legend()
 
